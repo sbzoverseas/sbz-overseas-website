@@ -1,0 +1,1235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SBZ Overseas is an India-based export and import consultancy helping businesses research international markets, understand trade regulations and develop cross-border opportunities.">
+  <meta name="theme-color" content="#07182d">
+  <title>SBZ Overseas | Export & Import Consultancy India</title>
+
+  <style>
+    :root {
+      --navy: #07182d;
+      --navy-light: #102b49;
+      --blue: #27a9df;
+      --blue-dark: #087eae;
+      --ink: #15283d;
+      --muted: #657487;
+      --light: #f3f7fb;
+      --white: #ffffff;
+      --line: #e1e9f1;
+      --gold: #d9b46b;
+      --radius: 18px;
+      --width: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+      background: var(--white);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    img { max-width: 100%; display: block; }
+    section { scroll-margin-top: 85px; }
+
+    .container {
+      width: min(var(--width), calc(100% - 44px));
+      margin-inline: auto;
+    }
+
+    .topline {
+      background: var(--navy);
+      color: #d7e5f2;
+      font-size: 12px;
+      padding: 8px 0;
+    }
+
+    .topline .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 175px;
+    }
+
+    .brand img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .brand-tag {
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #31445a;
+    }
+
+    .nav-links a:hover { color: var(--blue-dark); }
+
+    .nav-cta, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 6px;
+      padding: 13px 19px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .nav-cta, .btn-primary {
+      background: var(--blue);
+      color: var(--navy);
+    }
+
+    .nav-cta:hover, .btn-primary:hover {
+      background: #62c8ef;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.5);
+      color: white;
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    .menu-toggle {
+      display: none;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 9px 12px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .hero {
+      color: white;
+      background:
+        radial-gradient(ellipse at 85% 30%, rgba(39,169,223,.19), transparent 40%),
+        linear-gradient(125deg, #061529 0%, #0a2543 60%, #10385a 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 45px;
+      padding-block: 88px 96px;
+      min-height: 565px;
+    }
+
+    .eyebrow {
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero .eyebrow { color: #75d5fa; }
+
+    .eyebrow:before {
+      content: "";
+      width: 26px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(39px, 5vw, 61px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin: 24px 0;
+      max-width: 650px;
+    }
+
+    h1 span { color: #49bde9; }
+
+    .hero-copy {
+      color: #d0deed;
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 565px;
+      margin-bottom: 29px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      margin-top: 27px;
+      color: #b2c6da;
+      font-size: 12px;
+    }
+
+    .hero-visual {
+      min-height: 365px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .world-art {
+      width: min(100%, 460px);
+      aspect-ratio: 1;
+      border: 1px solid rgba(116,202,242,.22);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(39,169,223,.16), transparent 58%),
+        repeating-radial-gradient(circle at 50% 50%, transparent 0 48px, rgba(107,201,242,.1) 49px 50px);
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .world-art:before, .world-art:after {
+      content: "";
+      position: absolute;
+      inset: 9%;
+      border: 1px solid rgba(109,199,241,.22);
+      border-radius: 50%;
+      transform: rotate(-25deg) scaleX(.55);
+    }
+
+    .world-art:after {
+      transform: rotate(25deg) scaleX(.55);
+    }
+
+    .world-map {
+      width: 83%;
+      opacity: .88;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,.15));
+    }
+
+    .float-card {
+      position: absolute;
+      padding: 14px 17px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.96);
+      color: var(--navy);
+      box-shadow: 0 15px 45px rgba(0,0,0,.22);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .float-card small {
+      display: block;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .float-one { top: 12%; left: -2%; }
+    .float-two { bottom: 12%; right: -2%; }
+
+    .trust-strip {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding-block: 25px;
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #354a60;
+    }
+
+    .trust-icon {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #e9f7fd;
+      color: #087eae;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .section { padding-block: 88px; }
+    .section-light { background: var(--light); }
+    .section-dark { background: var(--navy); color: white; }
+
+    .section-heading {
+      max-width: 690px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin: 15px 0;
+    }
+
+    .section-dark .section-heading h2 { color: white; }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 0;
+    }
+
+    .section-dark .section-heading p { color: #b9cadd; }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 26px 22px;
+      border-radius: var(--radius);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(8,35,62,.08);
+    }
+
+    .service-icon {
+      width: 47px;
+      height: 47px;
+      display: grid;
+      place-items: center;
+      background: #e9f7fd;
+      color: #087eae;
+      border-radius: 12px;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .process-list { display: grid; gap: 0; }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 49px 1fr;
+      gap: 18px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-number {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--blue-dark);
+      border: 1px solid #b8e5f6;
+      background: #effaff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .process-step h3 {
+      font-size: 15px;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .process-step p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .feature-panel {
+      background: var(--navy);
+      border-radius: 22px;
+      color: white;
+      padding: 39px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-panel:after {
+      content: "SBZ";
+      position: absolute;
+      right: -12px;
+      bottom: -67px;
+      font-size: 150px;
+      font-weight: 900;
+      color: rgba(255,255,255,.035);
+      pointer-events: none;
+    }
+
+    .feature-panel h3 {
+      font-size: 27px;
+      line-height: 1.3;
+      margin: 16px 0;
+    }
+
+    .feature-panel > p {
+      color: #c5d5e5;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .feature-list {
+      padding: 0;
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .feature-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      font-size: 13px;
+      color: #e2edf6;
+    }
+
+    .feature-list li:before {
+      content: "✓";
+      color: #53c5ee;
+      font-weight: bold;
+      margin-right: 11px;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 17px;
+    }
+
+    .industry-card {
+      padding: 25px;
+      min-height: 165px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .industry-card .industry-icon {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .industry-card h3 {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--navy);
+      margin-bottom: 0;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .market-card {
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.04);
+      padding: 23px 18px;
+      border-radius: 13px;
+    }
+
+    .market-card .market-icon {
+      color: #53c5ee;
+      font-size: 25px;
+    }
+
+    .market-card h3 {
+      margin: 12px 0 7px;
+      font-size: 16px;
+    }
+
+    .market-card p {
+      color: #b8cadc;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .intelligence-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 19px;
+    }
+
+    .intel-card {
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 27px;
+      background: white;
+    }
+
+    .intel-card .intel-number {
+      font-size: 12px;
+      color: var(--blue-dark);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .intel-card h3 {
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 13px 0 9px;
+      color: var(--navy);
+    }
+
+    .intel-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .audience-card {
+      border-radius: 18px;
+      padding: 36px;
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .audience-card h3 {
+      font-size: 24px;
+      color: var(--navy);
+      line-height: 1.35;
+      margin: 12px 0;
+    }
+
+    .audience-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta-banner {
+      padding: 55px;
+      border-radius: 20px;
+      background: linear-gradient(120deg, #0a2441, #10456a);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(26px, 4vw, 37px);
+      line-height: 1.25;
+      margin: 10px 0;
+    }
+
+    .cta-banner p {
+      color: #cad9e8;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 55px;
+    }
+
+    .contact-details h3 {
+      color: var(--navy);
+      font-size: 24px;
+    }
+
+    .contact-details p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-form {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
+    }
+
+    .field { display: grid; gap: 7px; }
+    .field-full { grid-column: 1 / -1; }
+
+    .field label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #31445a;
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      border: 1px solid #d8e2ec;
+      border-radius: 7px;
+      padding: 12px;
+      color: var(--ink);
+      background: white;
+      outline: none;
+    }
+
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(39,169,223,.12);
+    }
+
+    .field textarea { min-height: 110px; resize: vertical; }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 11px;
+      margin: 14px 0 0;
+    }
+
+    .footer {
+      background: #041121;
+      color: white;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 38px;
+      padding-bottom: 38px;
+    }
+
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .footer p {
+      color: #afc1d3;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .footer h4 {
+      font-size: 13px;
+      margin: 5px 0 17px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      color: #b7c8d9;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover { color: #53c5ee; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 19px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: #91a8bd;
+      font-size: 11px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      animation: enter .65s ease both;
+    }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1000px) {
+      .nav-links { gap: 13px; font-size: 12px; }
+      .nav-cta { padding: 11px 13px; font-size: 12px; }
+      .brand img { width: 55px; height: 55px; }
+      .brand { min-width: 145px; }
+      .brand-name { font-size: 17px; }
+      .service-grid, .industry-grid { grid-template-columns: repeat(2, 1fr); }
+      .market-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-grid { gap: 25px; }
+      .split { gap: 35px; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, var(--width)); }
+      .topline .container { justify-content: center; text-align: center; }
+      .topline .top-extra { display: none; }
+      .nav-inner { min-height: 72px; gap: 10px; }
+      .brand { min-width: 0; gap: 8px; }
+      .brand img { width: 49px; height: 49px; }
+      .brand-name { font-size: 16px; }
+      .brand-tag { font-size: 8px; letter-spacing: .6px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 15px 22px 22px;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 15px 25px rgba(0,0,0,.07);
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        font-size: 14px;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 11px 0; border-bottom: 1px solid #eef2f6; }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-block: 62px 52px;
+        gap: 28px;
+      }
+
+      h1 { font-size: clamp(39px, 10vw, 53px); letter-spacing: -1.5px; }
+      .hero-copy { font-size: 14px; }
+      .hero-visual { min-height: 290px; }
+      .world-art { width: min(86%, 330px); }
+      .float-one { left: 0; top: 5%; }
+      .float-two { right: 0; bottom: 4%; }
+      .float-card { padding: 10px 12px; font-size: 10px; }
+
+      .trust-grid { grid-template-columns: 1fr 1fr; gap: 17px 10px; }
+      .trust-item { font-size: 11px; }
+      .section { padding-block: 62px; }
+      .section-heading { margin-bottom: 28px; }
+      .section-heading h2 { font-size: 32px; }
+      .service-grid { gap: 12px; }
+      .service-card { padding: 20px 16px; }
+      .service-card h3 { font-size: 14px; }
+      .service-card p { font-size: 12px; }
+      .service-icon { width: 41px; height: 41px; font-size: 20px; }
+      .split { grid-template-columns: 1fr; gap: 32px; }
+      .feature-panel { padding: 28px 23px; }
+      .industry-grid { gap: 11px; }
+      .industry-card { padding: 18px 15px; min-height: 135px; }
+      .industry-card h3 { font-size: 13px; }
+      .market-grid { grid-template-columns: 1fr 1fr; gap: 11px; }
+      .market-card { padding: 18px 14px; }
+      .intelligence-grid { grid-template-columns: 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .audience-card { padding: 27px 23px; }
+      .cta-banner { padding: 30px 23px; flex-direction: column; align-items: flex-start; }
+      .contact-grid { grid-template-columns: 1fr; gap: 25px; }
+      .contact-form { padding: 22px 17px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field-full { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 27px 18px; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+      .footer { padding-top: 42px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *:before, *:after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline">
+    <div class="container">
+      <span>India-based Export &amp; Import Consultancy</span>
+      <span class="top-extra">Market intelligence · Trade strategy · Global opportunities</span>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="SBZ Overseas home">
+        <img src="assets/sbz-logo.jpg" alt="SBZ Overseas logo">
+        <div>
+          <div class="brand-name">SBZ OVERSEAS</div>
+          <div class="brand-tag">Export &amp; Import Consultancy</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#markets">Markets</a>
+        <a href="#intelligence">Export Intelligence</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">Book a Consultation ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false"
+        aria-controls="navLinks" aria-label="Open navigation">☰ Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">Your partner in international trade</div>
+          <h1>Take Your Business From <span>India to the World.</span></h1>
+          <p class="hero-copy">
+            We help businesses explore international markets, understand
+            trade requirements and identify cross-border opportunities
+            through research-led export and import consultancy.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Discuss Your Trade Goals ↗</a>
+            <a class="btn btn-outline" href="#services">Explore Our Services</a>
+          </div>
+          <p class="hero-note">Market intelligence. Regulatory research. Commercial strategy.</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustration representing global trade">
+          <div class="world-art">
+            <svg class="world-map" viewBox="0 0 500 350" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="#32B5E7" opacity=".8">
+                <path d="M55 73L87 44 126 40 145 57 175 61 188 86 165 104 158 127 132 137 119 166 98 156 88 128 68 112 45 103Z"/>
+                <path d="M143 169L169 174 189 202 187 231 173 260 164 293 148 316 137 286 142 253 131 222 130 197Z"/>
+                <path d="M220 62L249 48 279 58 295 77 324 74 347 91 380 89 399 108 426 110 445 132 422 146 398 137 379 156 350 151 336 175 307 179 288 160 265 153 251 132 227 121 208 96Z"/>
+                <path d="M247 158L272 163 296 183 302 214 286 241 279 275 257 294 243 268 247 241 229 218 230 187Z"/>
+                <path d="M363 211L389 204 412 219 425 243 405 262 378 257 363 237Z"/>
+              </g>
+              <g stroke="#7DDAFA" stroke-width="1.5" stroke-dasharray="4 6" opacity=".75">
+                <path d="M90 99Q240 -8 375 111"/>
+                <path d="M150 211Q263 90 385 222"/>
+                <path d="M102 110Q250 310 393 120"/>
+              </g>
+              <g fill="#FFFFFF">
+                <circle cx="151" cy="102" r="5"/>
+                <circle cx="290" cy="128" r="5"/>
+                <circle cx="375" cy="111" r="5"/>
+                <circle cx="385" cy="222" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="float-card float-one">Global Market Research<small>Insight before investment</small></div>
+          <div class="float-card float-two">India ↔ Global Markets<small>Connecting trade opportunities</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Our approach">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon">⌕</span>Market Intelligence</div>
+        <div class="trust-item"><span class="trust-icon">◎</span>Regulatory Research</div>
+        <div class="trust-item"><span class="trust-icon">↗</span>Commercial Strategy</div>
+        <div class="trust-item"><span class="trust-icon">⇄</span>Trade Execution Support</div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">What we do</div>
+          <h2>International Trade, Simplified.</h2>
+          <p>Practical research and advisory support for businesses navigating
+            the complexities of cross-border trade.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">⌕</div>
+            <h3>Export Market Research</h3>
+            <p>Evaluate demand, competitors, pricing and market-entry possibilities in target countries.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">▦</div>
+            <h3>Product &amp; HS Code Research</h3>
+            <p>Research product classification, applicable trade policies and regulatory considerations.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">✓</div>
+            <h3>Export Compliance Research</h3>
+            <p>Identify relevant documentation, restrictions, certifications and compliance questions.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>International Buyer Identification</h3>
+            <p>Research prospective importers, distributors and business partners against your product profile.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⇄</div>
+            <h3>Import Consultancy</h3>
+            <p>Assess sourcing options, import requirements, supplier suitability and landed-cost factors.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>Documentation &amp; Logistics</h3>
+            <p>Understand trade documents, Incoterms, shipping workflows and coordination requirements.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>Commercial &amp; Payment Advisory</h3>
+            <p>Explore payment terms, transaction risks, quotations and commercial structuring options.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">↗</div>
+            <h3>End-to-End Trade Advisory</h3>
+            <p>Structure a trade plan from initial feasibility research through partner engagement and execution support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="journey">
+      <div class="container split">
+        <div>
+          <div class="section-heading">
+            <div class="eyebrow">Our process</div>
+            <h2>From Product to International Opportunity.</h2>
+            <p>International trade requires more than finding a buyer. A structured
+              process helps businesses assess the market, requirements and commercial
+              realities before committing resources.</p>
+          </div>
+
+          <div class="process-list">
+            <div class="process-step"><div class="process-number">01</div><div><h3>Product Assessment</h3><p>Understand the product, specifications and business objectives.</p></div></div>
+            <div class="process-step"><div class="process-number">02</div><div><h3>Classification &amp; Regulations</h3><p>Research HS classification and applicable export or import controls.</p></div></div>
+            <div class="process-step"><div class="process-number">03</div><div><h3>Target Market Research</h3><p>Compare demand, competitors, pricing and entry requirements.</p></div></div>
+            <div class="process-step"><div class="process-number">04</div><div><h3>Buyer or Supplier Research</h3><p>Develop a relevant, evidence-based list of potential business partners.</p></div></div>
+            <div class="process-step"><div class="process-number">05</div><div><h3>Commercial Planning</h3><p>Consider pricing, Incoterms, payment terms and logistics.</p></div></div>
+            <div class="process-step"><div class="process-number">06</div><div><h3>Execution Support</h3><p>Coordinate next steps with the relevant commercial and logistics partners.</p></div></div>
+          </div>
+        </div>
+
+        <aside class="feature-panel">
+          <div class="eyebrow">A research-led approach</div>
+          <h3>Make informed trade decisions before making costly commitments.</h3>
+          <p>Every product and destination market is different. We focus on understanding
+            your requirements before developing a practical research and advisory plan.</p>
+          <ul class="feature-list">
+            <li>Product-specific market assessment</li>
+            <li>Country and regulatory research</li>
+            <li>Commercial considerations and risks</li>
+            <li>Relevant buyer or supplier intelligence</li>
+            <li>Clear next steps for your business</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Discuss Your Requirements ↗</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="industries">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Industry focus</div>
+          <h2>Industries We Serve.</h2>
+          <p>Research and advisory opportunities across India's diverse manufacturing
+            and supply ecosystem. Engagements depend on the product and project scope.</p>
+        </div>
+        <div class="industry-grid">
+          <article class="industry-card"><div class="industry-icon">⚗</div><h3>Chemicals &amp; Specialty Chemicals</h3></article>
+          <article class="industry-card"><div class="industry-icon">✚</div><h3>Pharmaceuticals &amp; Healthcare</h3></article>
+          <article class="industry-card"><div class="industry-icon">⚙</div><h3>Engineering &amp; Industrial Products</h3></article>
+          <article class="industry-card"><div class="industry-icon">▥</div><h3>Textiles &amp; Apparel</h3></article>
+          <article class="industry-card"><div class="industry-icon">❋</div><h3>Food &amp; Agricultural Products</h3></article>
+          <article class="industry-card"><div class="industry-icon">ϟ</div><h3>Renewable Energy &amp; Components</h3></article>
+          <article class="industry-card"><div class="industry-icon">▣</div><h3>Electronics &amp; Semiconductor Materials</h3></article>
+          <article class="industry-card"><div class="industry-icon">▤</div><h3>Industrial Raw Materials</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="markets">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Global perspective</div>
+          <h2>Connecting India With Global Markets.</h2>
+          <p>We can research target countries based on your product, commercial objectives,
+            applicable regulations and available market evidence. Coverage is assessed
+            project by project.</p>
+        </div>
+        <div class="market-grid">
+          <article class="market-card"><div class="market-icon">◉</div><h3>Middle East</h3><p>Gulf markets and regional trade opportunities.</p></article>
+          <article class="market-card"><div class="market-icon">◉</div><h3>Africa</h3><p>Country-specific demand and distribution research.</p></article>
+          <article class="market-card"><div class="market-icon">◉</div><h3>Europe</h3><p>Market access, standards and buyer research.</p></article>
+          <article class="market-card"><div class="market-icon">◉</div><h3>Asia-Pacific</h3><p>Regional sourcing and trade opportunities.</p></article>
+          <article class="market-card"><div class="market-icon">◉</div><h3>Americas</h3><p>Import demand and potential market assessment.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="intelligence">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Export intelligence</div>
+          <h2>Research. Regulations. Markets. Opportunities.</h2>
+          <p>Better decisions begin with better questions, reliable sources and product-specific analysis.</p>
+        </div>
+        <div class="intelligence-grid">
+          <article class="intel-card"><div class="intel-number">01 / MARKETS</div><h3>Country Market Reports</h3><p>Explore demand indicators, competitors, market conditions and entry considerations.</p></article>
+          <article class="intel-card"><div class="intel-number">02 / CLASSIFICATION</div><h3>HS Code &amp; Trade Policy Research</h3><p>Understand classification questions and identify relevant official policy sources.</p></article>
+          <article class="intel-card"><div class="intel-number">03 / OPPORTUNITIES</div><h3>Product Export Feasibility</h3><p>Assess potential destinations, commercial considerations and barriers for a product.</p></article>
+          <article class="intel-card"><div class="intel-number">04 / COMPLIANCE</div><h3>Regulatory Research</h3><p>Identify the rules, controls and documentation that may apply to a proposed transaction.</p></article>
+          <article class="intel-card"><div class="intel-number">05 / TRADE DATA</div><h3>Import &amp; Export Analysis</h3><p>Use available trade data to investigate product flows and potential market opportunities.</p></article>
+          <article class="intel-card"><div class="intel-number">06 / PARTNERS</div><h3>Buyer &amp; Supplier Intelligence</h3><p>Build researched prospect lists aligned with the client's products and commercial needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="section-heading">
+          <div class="eyebrow">About SBZ Overseas</div>
+          <h2>Building Clarity Around Global Trade.</h2>
+          <p>SBZ Overseas is being positioned as an India-based export and import consultancy
+            focused on helping businesses understand international opportunities and
+            navigate the research, regulatory and commercial dimensions of cross-border trade.</p>
+          <p>Our approach combines market intelligence, product research, regulatory
+            awareness and practical commercial planning. Recommendations are tailored
+            to the requirements of each engagement.</p>
+          <a class="btn btn-primary" href="#contact">Start a Conversation ↗</a>
+        </div>
+        <div class="feature-panel">
+          <div class="eyebrow">Our approach</div>
+          <h3>Four pillars of international trade advisory.</h3>
+          <ul class="feature-list">
+            <li><strong>Markets:</strong> Where might your product compete?</li>
+            <li><strong>Products:</strong> What is the opportunity and who needs it?</li>
+            <li><strong>Compliance:</strong> Which rules and requirements need checking?</li>
+            <li><strong>Execution:</strong> What are the practical commercial next steps?</li>
+          </ul>
+          <p>We aim to help clients make more informed decisions, not promise guaranteed exports or buyers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Who we help</div>
+          <h2>One Trade Partner. Two Directions.</h2>
+          <p>Whether you're based in India or looking to source from India, begin with your product and your commercial objective.</p>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card">
+            <div class="eyebrow">For Indian businesses</div>
+            <h3>Looking to export your products?</h3>
+            <p>Explore target markets, assess export feasibility and research potential international buyers.</p>
+            <a class="btn btn-primary" href="#contact">Explore Export Consultancy ↗</a>
+          </article>
+          <article class="audience-card">
+            <div class="eyebrow">For international buyers</div>
+            <h3>Looking to source from India?</h3>
+            <p>Investigate Indian supply options, research manufacturers and evaluate sourcing requirements.</p>
+            <a class="btn btn-primary" href="#contact">Discuss India Sourcing ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-banner" style="margin-bottom:55px">
+          <div>
+            <div class="eyebrow">Your next step</div>
+            <h2>Not Sure If Your Product Can Be Exported?</h2>
+            <p>Tell us about your product, your target market and your trade objectives.</p>
+          </div>
+          <a class="btn btn-primary" href="#enquiry">Request an Assessment ↗</a>
+        </div>
+
+        <div class="contact-grid" id="enquiry">
+          <div class="contact-details">
+            <div class="eyebrow">Contact our team</div>
+            <h3>Let's discuss your trade goals.</h3>
+            <p>Share a few details so we can understand the scope of your enquiry and the research or advisory support you may need.</p>
+            <p><strong>SBZ Overseas</strong><br>Export &amp; Import Consultancy<br>India</p>
+            <p>Contact details will be added here before the website launches.</p>
+          </div>
+
+          <form class="contact-form" id="enquiryForm">
+            <div class="form-grid">
+              <div class="field"><label for="name">Full name *</label><input id="name" name="name" required autocomplete="name" placeholder="Your name"></div>
+              <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" placeholder="Company name"></div>
+              <div class="field"><label for="email">Business email *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com"></div>
+              <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" autocomplete="tel" placeholder="Country code + number"></div>
+              <div class="field"><label for="direction">Your requirement *</label><select id="direction" name="direction" required><option value="">Select an option</option><option>Export from India</option><option>Import into India</option><option>Source products from India</option><option>Market research</option><option>Compliance and HS code research</option><option>Buyer or supplier identification</option><option>Other</option></select></div>
+              <div class="field"><label for="country">Target country</label><input id="country" name="country" placeholder="e.g. Germany, UAE"></div>
+              <div class="field field-full"><label for="product">Product / HS code (if known)</label><input id="product" name="product" placeholder="Product name, specifications or HS code"></div>
+              <div class="field field-full"><label for="message">Tell us about your requirement *</label><textarea id="message" name="message" required placeholder="Your product, target market and what you need help with"></textarea></div>
+              <div class="field field-full"><button class="btn btn-primary" type="submit">Prepare Enquiry ↗</button><p class="form-note">This initial form prepares an enquiry email in your email app. It does not transmit or store your details on this website. The official contact email must be configured before launch.</p></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">SBZ OVERSEAS</div>
+          <p>Export &amp; Import Consultancy<br>Helping businesses navigate international trade from India to the world.</p>
+        </div>
+        <div><h4>Services</h4><div class="footer-links"><a href="#services">Export Consultancy</a><a href="#services">Import Consultancy</a><a href="#services">Market Research</a><a href="#services">Compliance Research</a><a href="#services">Buyer Identification</a></div></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="#industries">Industries</a><a href="#markets">Markets</a><a href="#intelligence">Export Intelligence</a><a href="#journey">Our Process</a><a href="#about">About Us</a></div></div>
+        <div><h4>Get in Touch</h4><div class="footer-links"><a href="#contact">Request an Assessment</a><a href="#contact">Book a Consultation</a><span>India</span></div></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> SBZ Overseas. All rights reserved.</span>
+        <span>Export &amp; Import Consultancy | India</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰ Menu";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("enquiryForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const lines = [
+        "Name: " + data.get("name"),
+        "Company: " + data.get("company"),
+        "Email: " + data.get("email"),
+        "Phone: " + data.get("phone"),
+        "Requirement: " + data.get("direction"),
+        "Target country: " + data.get("country"),
+        "Product / HS code: " + data.get("product"),
+        "",
+        "Details:",
+        data.get("message")
+      ];
+      const subject = encodeURIComponent("SBZ Overseas — Trade Consultancy Enquiry");
+      const body = encodeURIComponent(lines.join("\n"));
+      alert("Your email app will open to prepare your enquiry. We will configure the official SBZ contact email before launch.");
+      window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
